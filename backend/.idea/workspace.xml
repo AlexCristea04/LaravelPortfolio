@@ -4,7 +4,172 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3dcc5df5-7f32-496d-87ae-e2ee491c5053" name="Changes" comment="" />
+    <list default="true" id="3dcc5df5-7f32-496d-87ae-e2ee491c5053" name="Changes" comment="Frontend setup">
+      <change afterPath="$PROJECT_DIR$/app/Models/Project.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/Axios/AXIOS.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/Axios/AuthentificationContext.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/Axios/ProtectedRoute.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/Footer/Footer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/Navbar/Navbar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/Pages/Contact/Contact.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/Pages/Home/Home.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/Pages/Projects/Projects.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/Pages/Resume/AlexCristeaCV.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/Pages/Resume/AlexCristeaCVFrançais.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/Pages/Resume/Resume.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/Shared/global.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/Shared/profile.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/autoload.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bin/carbon" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bin/carbon.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bin/patch-type-declarations" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bin/patch-type-declarations.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bin/php-parse" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bin/php-parse.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bin/phpunit" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bin/phpunit.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bin/pint" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bin/pint.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bin/psysh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bin/psysh.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bin/sail" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bin/sail.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bin/var-dump-server" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bin/var-dump-server.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bin/yaml-lint" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/bin/yaml-lint.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/brick/math" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/carbonphp/carbon-doctrine-types" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/InstalledVersions.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_files.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/platform_check.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/dflydev/dot-access-data" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/doctrine/inflector" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/doctrine/lexer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/dragonmantank/cron-expression" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/egulias/email-validator" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/fakerphp/faker" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/filp/whoops" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/fruitcake/php-cors" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/graham-campbell/result-type" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/guzzlehttp/promises" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/guzzlehttp/psr7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/guzzlehttp/uri-template" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/hamcrest/hamcrest-php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/framework" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/pint" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/prompts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/sail" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/sanctum" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/serializable-closure" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/laravel/tinker" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/league/commonmark" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/league/config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/league/flysystem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/league/flysystem-local" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/league/mime-type-detection" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/mockery/mockery" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/monolog/monolog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/myclabs/deep-copy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/nesbot/carbon" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/nette/schema" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/nette/utils" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/nikic/php-parser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/nunomaduro/collision" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/nunomaduro/termwind" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phar-io/manifest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phar-io/version" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpoption/phpoption" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/php-invoker" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/php-text-template" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/php-timer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/psr/clock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/psr/container" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/psr/event-dispatcher" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/psr/http-client" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/psr/http-factory" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/psr/http-message" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/psr/log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/psr/simple-cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/psy/psysh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/ralouphie/getallheaders" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/ramsey/collection" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/ramsey/uuid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/sebastian/cli-parser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/sebastian/code-unit" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/sebastian/comparator" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/sebastian/complexity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/sebastian/diff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/sebastian/environment" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/sebastian/exporter" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/sebastian/global-state" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/sebastian/lines-of-code" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/sebastian/object-enumerator" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/sebastian/object-reflector" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/sebastian/recursion-context" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/sebastian/type" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/sebastian/version" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/spatie/backtrace" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/spatie/error-solutions" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/spatie/flare-client-php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/spatie/ignition" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/spatie/laravel-ignition" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/console" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/error-handler" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/finder" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/mailer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/mime" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-php80" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-php83" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-uuid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/process" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/routing" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/service-contracts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/string" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/translation" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/translation-contracts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/var-dumper" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/symfony/yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/theseer/tokenizer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/tijsverkoyen/css-to-inline-styles" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/vlucas/phpdotenv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/voku/portable-ascii" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/webmozart/assert" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/gltf/GltfModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/gltf/ModelViewer.js" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,14 +188,92 @@
     &quot;assignee&quot;: &quot;Justin222993&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Justin222993/portfolio.git",
-    "accountId": "8669cc27-93fc-4157-9e40-2198f325574e"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Justin222993/portfolio.git&quot;,
+    &quot;accountId&quot;: &quot;8669cc27-93fc-4157-9e40-2198f325574e&quot;
   }
-}]]></component>
+}</component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\xampp\php\php.exe">
     <include_path>
+      <path value="$PROJECT_DIR$/vendor/psr/clock" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-client" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/vendor/psy/psysh" />
+      <path value="$PROJECT_DIR$/vendor/filp/whoops" />
+      <path value="$PROJECT_DIR$/vendor/voku/portable-ascii" />
+      <path value="$PROJECT_DIR$/vendor/brick/math" />
+      <path value="$PROJECT_DIR$/vendor/nette/schema" />
+      <path value="$PROJECT_DIR$/vendor/nette/utils" />
+      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/vendor/league/commonmark" />
+      <path value="$PROJECT_DIR$/vendor/league/config" />
+      <path value="$PROJECT_DIR$/vendor/league/flysystem" />
+      <path value="$PROJECT_DIR$/vendor/league/flysystem-local" />
+      <path value="$PROJECT_DIR$/vendor/league/mime-type-detection" />
+      <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/vendor/ramsey/collection" />
+      <path value="$PROJECT_DIR$/vendor/ramsey/uuid" />
+      <path value="$PROJECT_DIR$/vendor/spatie/backtrace" />
+      <path value="$PROJECT_DIR$/vendor/spatie/error-solutions" />
+      <path value="$PROJECT_DIR$/vendor/spatie/flare-client-php" />
+      <path value="$PROJECT_DIR$/vendor/spatie/ignition" />
+      <path value="$PROJECT_DIR$/vendor/spatie/laravel-ignition" />
+      <path value="$PROJECT_DIR$/vendor/vlucas/phpdotenv" />
+      <path value="$PROJECT_DIR$/vendor/dflydev/dot-access-data" />
+      <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/vendor/laravel/framework" />
+      <path value="$PROJECT_DIR$/vendor/laravel/pint" />
+      <path value="$PROJECT_DIR$/vendor/laravel/prompts" />
+      <path value="$PROJECT_DIR$/vendor/laravel/sail" />
+      <path value="$PROJECT_DIR$/vendor/laravel/sanctum" />
+      <path value="$PROJECT_DIR$/vendor/laravel/serializable-closure" />
+      <path value="$PROJECT_DIR$/vendor/laravel/tinker" />
+      <path value="$PROJECT_DIR$/vendor/mockery/mockery" />
+      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-invoker" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/vendor/symfony/mailer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php83" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-uuid" />
+      <path value="$PROJECT_DIR$/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/uid" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
       <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
       <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
       <path value="$PROJECT_DIR$/vendor/fakerphp/faker" />
@@ -65,84 +308,6 @@
       <path value="$PROJECT_DIR$/vendor/dragonmantank/cron-expression" />
       <path value="$PROJECT_DIR$/vendor/graham-campbell/result-type" />
       <path value="$PROJECT_DIR$/vendor/composer" />
-      <path value="$PROJECT_DIR$/vendor/laravel/sanctum" />
-      <path value="$PROJECT_DIR$/vendor/psr/clock" />
-      <path value="$PROJECT_DIR$/vendor/psr/container" />
-      <path value="$PROJECT_DIR$/vendor/psr/event-dispatcher" />
-      <path value="$PROJECT_DIR$/vendor/psr/http-client" />
-      <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
-      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
-      <path value="$PROJECT_DIR$/vendor/psr/log" />
-      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
-      <path value="$PROJECT_DIR$/vendor/psy/psysh" />
-      <path value="$PROJECT_DIR$/vendor/filp/whoops" />
-      <path value="$PROJECT_DIR$/vendor/voku/portable-ascii" />
-      <path value="$PROJECT_DIR$/vendor/brick/math" />
-      <path value="$PROJECT_DIR$/vendor/nette/schema" />
-      <path value="$PROJECT_DIR$/vendor/nette/utils" />
-      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
-      <path value="$PROJECT_DIR$/vendor/league/commonmark" />
-      <path value="$PROJECT_DIR$/vendor/league/config" />
-      <path value="$PROJECT_DIR$/vendor/league/flysystem" />
-      <path value="$PROJECT_DIR$/vendor/league/flysystem-local" />
-      <path value="$PROJECT_DIR$/vendor/league/mime-type-detection" />
-      <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
-      <path value="$PROJECT_DIR$/vendor/ramsey/collection" />
-      <path value="$PROJECT_DIR$/vendor/ramsey/uuid" />
-      <path value="$PROJECT_DIR$/vendor/vlucas/phpdotenv" />
-      <path value="$PROJECT_DIR$/vendor/dflydev/dot-access-data" />
-      <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
-      <path value="$PROJECT_DIR$/vendor/laravel/framework" />
-      <path value="$PROJECT_DIR$/vendor/laravel/pint" />
-      <path value="$PROJECT_DIR$/vendor/laravel/prompts" />
-      <path value="$PROJECT_DIR$/vendor/laravel/sail" />
-      <path value="$PROJECT_DIR$/vendor/laravel/serializable-closure" />
-      <path value="$PROJECT_DIR$/vendor/laravel/tinker" />
-      <path value="$PROJECT_DIR$/vendor/mockery/mockery" />
-      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
-      <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
-      <path value="$PROJECT_DIR$/vendor/phar-io/manifest" />
-      <path value="$PROJECT_DIR$/vendor/phar-io/version" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-invoker" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
-      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
-      <path value="$PROJECT_DIR$/vendor/symfony/console" />
-      <path value="$PROJECT_DIR$/vendor/spatie/error-solutions" />
-      <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
-      <path value="$PROJECT_DIR$/vendor/spatie/backtrace" />
-      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
-      <path value="$PROJECT_DIR$/vendor/spatie/ignition" />
-      <path value="$PROJECT_DIR$/vendor/symfony/error-handler" />
-      <path value="$PROJECT_DIR$/vendor/spatie/flare-client-php" />
-      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
-      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
-      <path value="$PROJECT_DIR$/vendor/spatie/laravel-ignition" />
-      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
-      <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
-      <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
-      <path value="$PROJECT_DIR$/vendor/symfony/mailer" />
-      <path value="$PROJECT_DIR$/vendor/symfony/mime" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php83" />
-      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-uuid" />
-      <path value="$PROJECT_DIR$/vendor/symfony/process" />
-      <path value="$PROJECT_DIR$/vendor/symfony/routing" />
-      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
-      <path value="$PROJECT_DIR$/vendor/symfony/string" />
-      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
-      <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
-      <path value="$PROJECT_DIR$/vendor/symfony/uid" />
-      <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
-      <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
-      <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
     </include_path>
   </component>
   <component name="ProjectColorInfo">{
@@ -153,27 +318,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "PHP Script.artisan.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/justi/Desktop/Portfolio/backend/artisan",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;PHP Script.artisan.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/alexc/OneDrive/Desktop/FreshClone/LaravelPortfolio/backend&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="PHP Script.artisan">
     <configuration name="Main" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner configuration_file="$PROJECT_DIR$/phpunit.xml" scope="XML" use_alternative_configuration_file="true" />
       <method v="2" />
     </configuration>
     <configuration name="artisan" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/artisan" scriptParameters="serve">
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="C:\xampp\php\php.exe" />
+        </PhpTestInterpreterSettings>
+      </CommandLine>
       <method v="2" />
     </configuration>
     <list>
@@ -184,8 +355,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-PS-243.23654.115" />
-        <option value="bundled-php-predefined-a98d8de5180a-4c3855d0ab16-com.jetbrains.php.sharedIndexes-PS-243.23654.115" />
+        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-PS-243.23654.168" />
+        <option value="bundled-php-predefined-a98d8de5180a-4c3855d0ab16-com.jetbrains.php.sharedIndexes-PS-243.23654.168" />
       </set>
     </attachedChunks>
   </component>
@@ -199,10 +370,16 @@
       <updated>1737931124264</updated>
       <workItem from="1737931125539" duration="620000" />
       <workItem from="1737932930285" duration="1303000" />
+      <workItem from="1739214033378" duration="6650000" />
+      <workItem from="1739230686222" duration="302000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Frontend setup" />
+    <option name="LAST_COMMIT_MESSAGE" value="Frontend setup" />
   </component>
 </project>
