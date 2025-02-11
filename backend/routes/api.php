@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\TestimonialController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -21,3 +23,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('/test', function () {
     return response()->json(['message' => 'This is a test route']);
 });
+
+Route::apiResource('projects', ProjectController::class);
+Route::apiResource('testimonials', TestimonialController::class);
+Route::patch('testimonials/{testimonial}/approve', [TestimonialController::class, 'approve']);
+Route::patch('testimonials/{testimonial}/unapprove', [TestimonialController::class, 'unapprove']);

@@ -5,170 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3dcc5df5-7f32-496d-87ae-e2ee491c5053" name="Changes" comment="Frontend setup">
-      <change afterPath="$PROJECT_DIR$/app/Models/Project.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/Axios/AXIOS.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/Axios/AuthentificationContext.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/Axios/ProtectedRoute.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/Footer/Footer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/Navbar/Navbar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/Pages/Contact/Contact.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/Pages/Home/Home.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/Pages/Projects/Projects.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/Pages/Resume/AlexCristeaCV.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/Pages/Resume/AlexCristeaCVFrançais.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/Pages/Resume/Resume.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ProjectController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/TestimonialController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Projects/ProjectTranslation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Testimonial.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2025_02_10_234837_create_projects_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2025_02_10_234838_create_project_translations_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2025_02_11_001615_add_image_path_to_projects_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2025_02_11_005046_create_testimonials_table.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../frontend/src/Shared/global.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/src/Shared/profile.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/autoload.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bin/carbon" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bin/carbon.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bin/patch-type-declarations" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bin/patch-type-declarations.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bin/php-parse" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bin/php-parse.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bin/phpunit" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bin/phpunit.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bin/pint" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bin/pint.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bin/psysh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bin/psysh.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bin/sail" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bin/sail.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bin/var-dump-server" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bin/var-dump-server.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bin/yaml-lint" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bin/yaml-lint.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/brick/math" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/carbonphp/carbon-doctrine-types" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/InstalledVersions.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_files.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/platform_check.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/dflydev/dot-access-data" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/inflector" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/doctrine/lexer" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/dragonmantank/cron-expression" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/egulias/email-validator" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/fakerphp/faker" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/filp/whoops" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/fruitcake/php-cors" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/graham-campbell/result-type" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/guzzlehttp/promises" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/guzzlehttp/psr7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/guzzlehttp/uri-template" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/hamcrest/hamcrest-php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laravel/framework" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laravel/pint" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laravel/prompts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laravel/sail" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laravel/sanctum" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laravel/serializable-closure" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/laravel/tinker" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/league/commonmark" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/league/config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/league/flysystem" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/league/flysystem-local" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/league/mime-type-detection" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/mockery/mockery" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/monolog/monolog" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/myclabs/deep-copy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/nesbot/carbon" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/nette/schema" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/nette/utils" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/nikic/php-parser" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/nunomaduro/collision" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/nunomaduro/termwind" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/phar-io/manifest" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/phar-io/version" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/phpoption/phpoption" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/phpunit/php-invoker" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/phpunit/php-text-template" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/phpunit/php-timer" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/phpunit/phpunit" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/psr/clock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/psr/container" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/psr/event-dispatcher" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/psr/http-client" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/psr/http-factory" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/psr/http-message" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/psr/log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/psr/simple-cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/psy/psysh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ralouphie/getallheaders" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ramsey/collection" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ramsey/uuid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/sebastian/cli-parser" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/sebastian/code-unit" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/sebastian/comparator" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/sebastian/complexity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/sebastian/diff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/sebastian/environment" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/sebastian/exporter" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/sebastian/global-state" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/sebastian/lines-of-code" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/sebastian/object-enumerator" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/sebastian/object-reflector" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/sebastian/recursion-context" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/sebastian/type" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/sebastian/version" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/spatie/backtrace" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/spatie/error-solutions" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/spatie/flare-client-php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/spatie/ignition" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/spatie/laravel-ignition" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/console" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/css-selector" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/error-handler" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/finder" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-foundation" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/http-kernel" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/mailer" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/mime" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-php80" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-php83" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/polyfill-uuid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/process" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/routing" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/service-contracts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/string" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/translation" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/translation-contracts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/uid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/var-dumper" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/theseer/tokenizer" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/tijsverkoyen/css-to-inline-styles" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/vlucas/phpdotenv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/voku/portable-ascii" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/webmozart/assert" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/gltf/GltfModel.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/src/gltf/ModelViewer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Project.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Projects/Project.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,12 +36,12 @@
     &quot;assignee&quot;: &quot;Justin222993&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Justin222993/portfolio.git&quot;,
-    &quot;accountId&quot;: &quot;8669cc27-93fc-4157-9e40-2198f325574e&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/AlexCristea04/LaravelPortfolio",
+    "accountId": "5df78ee6-8606-4a02-8a0c-8699d673202c"
   }
-}</component>
+}]]></component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\xampp\php\php.exe">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/psr/clock" />
@@ -318,22 +166,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;PHP Script.artisan.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/alexc/OneDrive/Desktop/FreshClone/LaravelPortfolio/backend&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "PHP Script.artisan.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/alexc/OneDrive/Desktop/FreshClone/LaravelPortfolio/backend",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="PHP Script.artisan">
     <configuration name="Main" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner configuration_file="$PROJECT_DIR$/phpunit.xml" scope="XML" use_alternative_configuration_file="true" />
@@ -371,8 +220,17 @@
       <workItem from="1737931125539" duration="620000" />
       <workItem from="1737932930285" duration="1303000" />
       <workItem from="1739214033378" duration="6650000" />
-      <workItem from="1739230686222" duration="302000" />
+      <workItem from="1739230686222" duration="5945000" />
     </task>
+    <task id="LOCAL-00001" summary="Frontend setup">
+      <option name="closed" value="true" />
+      <created>1739231030805</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1739231030805</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
