@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\TestimonialController;
 use Illuminate\Http\Request;
@@ -24,7 +25,21 @@ Route::get('/test', function () {
     return response()->json(['message' => 'This is a test route']);
 });
 
-Route::apiResource('projects', ProjectController::class);
-Route::apiResource('testimonials', TestimonialController::class);
-Route::patch('testimonials/{testimonial}/approve', [TestimonialController::class, 'approve']);
-Route::patch('testimonials/{testimonial}/unapprove', [TestimonialController::class, 'unapprove']);
+// public routes
+Route::post('/admin/login', [AuthController::class, 'login']);
+Route::get('/projects', [ProjectController::class, 'index']);
+Route::get('/projects/{project}', [ProjectController::class, 'show']);
+Route::get('/testimonials', [TestimonialController::class, 'index']);
+Route::get('/testimonials/{testimonial}', [TestimonialController::class, 'show']);
+Route::post('/testimonials', [TestimonialController::class, 'store']);
+//Route::post('/admin/register', [AuthController::class, 'register']);
+
+// protected routes
+Route::middleware('auth:sanctum')->group(function () {
+    Route::post('/admin/logout', [AuthController::class, 'logout']);
+    Route::put('/testimonials/{testimonial}', [TestimonialController::class, 'update']);
+    Route::delete('/testimonials/{testimonial}', [TestimonialController::class, 'destroy']);
+    Route::patch('/testimonials/{testimonial}/approve', [TestimonialController::class, 'approve']);
+    Route::patch('/testimonials/{testimonial}/unapprove', [TestimonialController::class, 'unapprove']);
+    Route::apiResource('projects', ProjectController::class)->except(['index', 'show']);
+});
