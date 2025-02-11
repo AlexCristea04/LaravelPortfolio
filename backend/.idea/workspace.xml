@@ -4,12 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3dcc5df5-7f32-496d-87ae-e2ee491c5053" name="Changes" comment="Backend for projects and testimonials">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Admin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2025_02_11_024736_create_admins_table.php" afterDir="false" />
+    <list default="true" id="3dcc5df5-7f32-496d-87ae-e2ee491c5053" name="Changes" comment="Auth backend">
+      <change afterPath="$PROJECT_DIR$/../frontend/src/Pages/Admin/AdminPanel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/Pages/Admin/CreateProjectPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/Pages/Admin/EditProjectPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/Pages/Admin/LoginPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/src/Pages/Admin/Ok_-6023.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AuthController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/Axios/AuthentificationContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/Axios/AuthentificationContext.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/Footer/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/Footer/Footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/Pages/Home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/Pages/Home/Home.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,7 +220,7 @@
       <workItem from="1737931125539" duration="620000" />
       <workItem from="1737932930285" duration="1303000" />
       <workItem from="1739214033378" duration="6650000" />
-      <workItem from="1739230686222" duration="8352000" />
+      <workItem from="1739230686222" duration="12766000" />
     </task>
     <task id="LOCAL-00001" summary="Frontend setup">
       <option name="closed" value="true" />
@@ -231,7 +238,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739241444646</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Auth backend">
+      <option name="closed" value="true" />
+      <created>1739243239836</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1739243239836</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,6 +255,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Frontend setup" />
     <MESSAGE value="Backend for projects and testimonials" />
-    <option name="LAST_COMMIT_MESSAGE" value="Backend for projects and testimonials" />
+    <MESSAGE value="Auth backend" />
+    <option name="LAST_COMMIT_MESSAGE" value="Auth backend" />
   </component>
 </project>

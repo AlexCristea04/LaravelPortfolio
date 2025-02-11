@@ -4,12 +4,12 @@ const Footer = () => {
             <div className="container px-5">
                 <div className="row align-items-center justify-content-between flex-column flex-sm-row">
                     <div className="col-auto">
-                        <div className="small m-0">Copyright &copy; Your Website 2023</div>
+                        <div className="small m-0">Alex Cristea 2025</div>
                     </div>
                     <div className="col-auto">
-                        <a className="small" href="#!">Privacy</a>
+                        <a className="small" href="#!">LinkedIn</a>
                         <span className="mx-1">&middot;</span>
-                        <a className="small" href="#!">Terms</a>
+                        <a className="small" href="#!">GitHub</a>
                         <span className="mx-1">&middot;</span>
                         <a className="small" href="#!">Contact</a>
                     </div>

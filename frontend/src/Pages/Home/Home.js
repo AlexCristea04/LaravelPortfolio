@@ -46,7 +46,7 @@ const Home = () => {
                                 <h2 className="display-5 fw-bolder">
                                     <span className="text-gradient d-inline">About Me</span>
                                 </h2>
-                                <p className="lead fw-light mb-4">My name is Start Bootstrap and I help brands grow.</p>
+                                <p className="lead fw-light mb-4">My name is Alex Cristea and I help brands grow.</p>
                                 <p className="text-muted">
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit dolorum itaque qui unde quisquam
                                     consequatur autem. Eveniet quasi nobis aliquid cumque officiis sed rem iure ipsa! Praesentium ratione

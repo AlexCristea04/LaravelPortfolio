@@ -6,104 +6,126 @@ import React, {
     useCallback,
 } from 'react';
 import axios from 'axios';
-import { setAuthToken } from './AXIOS';
+import { setAuthToken } from './AXIOS'; // Ensure this correctly sets axios.defaults.headers.common['Authorization']
 
 const AuthContext = createContext();
-const environment = process.env.REACT_APP_API_GATEWAY_HOST;
+const API_BASE_URL = process.env.REACT_APP_API_GATEWAY_HOST || 'http://127.0.0.1:8000/api';
 
 export const AuthProvider = ({ children }) => {
-    const [authToken, setAuthTokenState] = useState(
-        localStorage.getItem('authToken') || null,
-    );
-    const [username, setUsername] = useState(
-        localStorage.getItem('username') || null,
-    );
-    const [loading, setLoading] = useState(true);
+    const [authToken, setAuthTokenState] = useState(localStorage.getItem('authToken') || null);
+    const [admin, setAdmin] = useState(JSON.parse(localStorage.getItem('admin')) || null);
+    const [loading, setLoading] = useState(false);
 
+    // Set axios headers whenever the token changes
     useEffect(() => {
         setAuthToken(authToken);
     }, [authToken]);
 
-    const login = async (username, password) => {
+    /** Login Method */
+    const login = async (email, password) => {
         try {
             setLoading(true);
-            const response = await axios.post(
-                `${environment}/gateway/api/ProxyAuth/login`,
-                {
-                    username,
-                    password,
-                },
-            );
 
-            const token = response.data.token;
-            setAuthTokenState(token);
-            localStorage.setItem('authToken', token);
-            localStorage.setItem('username', username);
-            setUsername(username);
+            const response = await axios.post(`${API_BASE_URL}/admin/login`, {
+                email,
+                password,
+            }, {
+                headers: { 'Content-Type': 'application/json' },
+            });
+
+            const { token } = response.data;
+
+            localStorage.setItem('authToken', token); // ✅ Store token first
+            setAuthTokenState(token); // ✅ Update React state
+
+            await fetchAdminData(); // ✅ Fetch user data after updating state
             setLoading(false);
-
             return token;
         } catch (error) {
             setLoading(false);
-            console.error('Login failed:', error);
+            console.error('Login failed:', error.response?.data || error.message);
             throw error;
         }
     };
 
-    const logout = async () => {
+
+    /** Fetch Admin Info */
+    const fetchAdminData = async () => {
+        try {
+            const storedToken = localStorage.getItem('authToken'); // ✅ Always get the latest token
+
+            if (!storedToken) {
+                throw new Error("No authentication token found");
+            }
+
+            const response = await axios.get(`${API_BASE_URL}/admin/verify-token`, {
+                headers: { Authorization: `Bearer ${storedToken}` }, // ✅ Ensure correct token is sent
+            });
+
+            if (response.data?.authenticated) {
+                setAdmin(response.data.admin);
+                localStorage.setItem('admin', JSON.stringify(response.data.admin));
+            } else {
+                logout(); // Logout if token is invalid
+            }
+        } catch (error) {
+            console.error('Fetching admin data failed:', error);
+            logout();
+        }
+    };
+
+
+    /** Logout Method */
+    const logout = useCallback(async () => {
         try {
             setLoading(true);
-            const storedUsername = username || localStorage.getItem('username');
-            await axios.post(
-                `${environment}/gateway/api/proxyAuth/logout`,
-                storedUsername,
-                {
-                    headers: {
-                        'Content-Type': 'application/json-patch+json',
-                        accept: '*/*',
-                    },
-                },
-            );
+            await axios.post(`${API_BASE_URL}/admin/logout`, {}, {
+                headers: { Authorization: `Bearer ${authToken}` },
+            });
 
             setAuthTokenState(null);
             localStorage.removeItem('authToken');
-            localStorage.removeItem('username');
-            setUsername(null);
+            localStorage.removeItem('admin');
+            setAdmin(null);
             setLoading(false);
         } catch (error) {
             setLoading(false);
             console.error('Logout failed:', error);
-            throw error;
         }
-    };
+    }, [authToken]);
 
     const verifyToken = useCallback(async () => {
         try {
             setLoading(true);
-            const response = await axios.post(
-                `${environment}/gateway/api/proxyAuth/verify-token`,
-                authToken,
-                {
-                    headers: { 'Content-Type': 'application/json' },
-                },
-            );
+            const response = await axios.get(`${API_BASE_URL}/admin/verify-token`, {
+                headers: { Authorization: `Bearer ${authToken}` },
+            });
 
-            setLoading(false);
-            return response.status === 200;
+            if (response.data?.authenticated) {
+                setAdmin(response.data.admin);
+                localStorage.setItem('admin', JSON.stringify(response.data.admin));
+                setLoading(false);
+                return true;
+            } else {
+                throw new Error("Invalid response format");
+            }
         } catch (error) {
-            setLoading(false);
             console.error('Token verification failed:', error);
-            setAuthTokenState(null);
-            localStorage.removeItem('authToken');
-            localStorage.removeItem('username');
-            setUsername(null);
+            logout(); // Now calling a stable `logout` function
             return false;
         }
-    }, [authToken]);
+    }, [authToken, logout]);
+
+    /**  Auto-Verify Token on Load */
+    useEffect(() => {
+        if (authToken) {
+            verifyToken();
+        }
+    }, [authToken, verifyToken]);
 
     return (
         <AuthContext.Provider
-            value={{ authToken, username, login, logout, verifyToken, loading }}
+            value={{ authToken, admin, login, logout, verifyToken, loading }}
         >
             {children}
         </AuthContext.Provider>

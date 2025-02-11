@@ -14,6 +14,9 @@ import Home from './Pages/Home/Home';
 import Contact from './Pages/Contact/Contact';
 import Projects from './Pages/Projects/Projects';
 import Resume from './Pages/Resume/Resume';
+import LoginPage from './Pages/Admin/LoginPage';
+import ProtectedRoute from './Axios/ProtectedRoute';
+import AdminPanel from './Pages/Admin/AdminPanel';
 
 function App() {
     console.log(process.env.REACT_APP_API_GATEWAY_HOST);
@@ -30,6 +33,17 @@ function App() {
                             <Route path="/contact" element={<Contact />} />
                             <Route path="/projects" element={<Projects />} />
                             <Route path="/resume" element={<Resume />} />
+                            <Route path="/admin/login" element={<LoginPage />} />
+
+                            {/* Protected routes */}
+                            <Route
+                                path="/admin/panel"
+                                element={
+                                    <ProtectedRoute>
+                                        <AdminPanel />
+                                    </ProtectedRoute>
+                                }
+                            />
                         </Routes>
                     </main>
                     <Footer />

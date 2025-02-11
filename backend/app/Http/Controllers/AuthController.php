@@ -49,7 +49,27 @@ class AuthController extends Controller
 
     public function logout(Request $request): JsonResponse
     {
+        if (!$request->user()) {
+            return response()->json(['error' => 'Unauthorized. No valid token found.'], 401);
+        }
+
         $request->user()->tokens()->delete();
         return response()->json(['message' => 'Logged out successfully']);
     }
+
+    public function verifyToken(Request $request): JsonResponse
+    {
+        if (!$request->user()) {
+            return response()->json([
+                'authenticated' => false,
+                'message' => 'Invalid or expired token.'
+            ], 401);
+        }
+
+        return response()->json([
+            'authenticated' => true,
+            'admin' => $request->user(),
+        ]);
+    }
+
 }

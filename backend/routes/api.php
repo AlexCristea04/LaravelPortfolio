@@ -42,4 +42,6 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::patch('/testimonials/{testimonial}/approve', [TestimonialController::class, 'approve']);
     Route::patch('/testimonials/{testimonial}/unapprove', [TestimonialController::class, 'unapprove']);
     Route::apiResource('projects', ProjectController::class)->except(['index', 'show']);
+    Route::post('/admin/logout', [AuthController::class, 'logout']);
+    Route::get('/admin/verify-token', [AuthController::class, 'verifyToken']);
 });
