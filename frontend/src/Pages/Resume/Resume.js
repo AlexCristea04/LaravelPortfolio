@@ -15,7 +15,7 @@ const Resume = () => {
                             <div className="d-flex align-items-center justify-content-between mb-4">
                                 <h2 className="text-primary fw-bolder mb-0">Experience</h2>
                                 {/* Download resume button */}
-                                <a className="btn btn-primary px-4 py-3" href="/AlexCristeaCV.pdf" download>
+                                <a className="btn btn-primary px-4 py-3" href="./AlexCristeaCV.pdf" download>
                                     <div className="d-inline-block bi bi-download me-2"></div>
                                     Download Resume
                                 </a>

@@ -32,7 +32,7 @@ Route::get('/projects/{project}', [ProjectController::class, 'show']);
 Route::get('/testimonials', [TestimonialController::class, 'index']);
 Route::get('/testimonials/{testimonial}', [TestimonialController::class, 'show']);
 Route::post('/testimonials', [TestimonialController::class, 'store']);
-//Route::post('/admin/register', [AuthController::class, 'register']);
+Route::post('/admin/register', [AuthController::class, 'register']);
 
 // protected routes
 Route::middleware('auth:sanctum')->group(function () {

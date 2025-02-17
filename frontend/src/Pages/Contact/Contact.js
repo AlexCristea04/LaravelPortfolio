@@ -67,20 +67,6 @@ const Contact = () => {
                                         <label htmlFor="email">Email address</label>
                                     </div>
 
-                                    {/* Phone input */}
-                                    <div className="form-floating mb-3">
-                                        <input
-                                            className="form-control"
-                                            id="phone"
-                                            type="tel"
-                                            placeholder="(123) 456-7890"
-                                            value={formData.phone}
-                                            onChange={handleChange}
-                                            required
-                                        />
-                                        <label htmlFor="phone">Phone number</label>
-                                    </div>
-
                                     {/* Message input */}
                                     <div className="form-floating mb-3">
                     <textarea

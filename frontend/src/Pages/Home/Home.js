@@ -27,7 +27,7 @@ const Home = () => {
                             </div>
                         </div>
                         <div className="col-xxl-7">
-                            <div className="d-flex justify-content-center mt-5 mt-xxl-0">
+                            <div className="d-flex justify-content-center mt-xxl-0">
                                 <div className="profile bg-gradient-primary-to-secondary">
                                     <img className="profile-img" src="/assets/profile.png" alt="Profile" />
                                 </div>
@@ -38,7 +38,7 @@ const Home = () => {
             </header>
 
             {/* About Me Section */}
-            <section className="bg-light py-5">
+            <section className="bg-dark-subtle py-5">
                 <div className="container px-5">
                     <div className="row gx-5 justify-content-center">
                         <div className="col-xxl-8">
