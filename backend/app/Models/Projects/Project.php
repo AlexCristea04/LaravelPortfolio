@@ -36,4 +36,6 @@ class Project extends Model
     {
         return $this->image_path ? asset('storage/' . $this->image_path) : null;
     }
+
+    protected $appends = ['image_url'];
 }

@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { useAuth } from '../../Axios/AuthentificationContext';
+import {useNavigate} from "react-router-dom";
 
 const LoginPage = () => {
     const { login, logout, authToken, admin } = useAuth();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
+    const navigate = useNavigate();
 
     const handleLogin = async (e) => {
         e.preventDefault();
@@ -28,9 +30,14 @@ const LoginPage = () => {
                         <p className="text-success text-center">
                             Welcome, <strong>{admin?.name}</strong>!
                         </p>
+                        <button className="btn btn-primary w-100" onClick={() => navigate('/admin/panel')}>
+                            Admin Panel
+                        </button>
+
                         <button className="btn btn-danger w-100" onClick={logout}>
                             Logout
                         </button>
+
                     </>
                 ) : (
                     <>

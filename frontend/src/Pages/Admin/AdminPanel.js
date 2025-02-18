@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useAuth } from '../../Axios/AuthentificationContext';
+import {useNavigate} from "react-router-dom";
 
 const AdminPanel = () => {
-    const { authToken } = useAuth();
+    const navigate = useNavigate();
+    const { authToken, logout } = useAuth();
     const [projects, setProjects] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -46,7 +48,7 @@ const AdminPanel = () => {
 
     // Modify a project (Redirect to edit page)
     const handleModify = (projectId) => {
-        window.location.href = `/admin/editproject/${projectId}`;
+        window.location.href = `/admin/panel/editproject/${projectId}`;
     };
 
     return (
@@ -55,10 +57,21 @@ const AdminPanel = () => {
                 <span className="text-gradient d-inline">Admin Panel</span>
             </h1>
 
+            <button className="btn btn-danger mb-3 d-inline" onClick={logout}>
+                Logout
+            </button>
+
             <h2 className="text-center mb-4">Manage Projects</h2>
 
             {loading && <p>Loading projects...</p>}
             {error && <p className="text-danger">{error}</p>}
+
+            <button
+                className="btn btn-primary mb-3"
+                onClick={() => navigate('/admin/panel/createproject')}
+            >
+                Add Project
+            </button>
 
             <div className="row">
                 {projects.map((project) => {

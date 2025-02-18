@@ -53,7 +53,7 @@ class ProjectController extends Controller
 
         return response()->json([
             'message' => 'Project created successfully',
-            'project' => $project
+            'project' => $project->load('translations')->makeHidden('image_path')->append('image_url')
         ]);
     }
 
@@ -98,7 +98,10 @@ class ProjectController extends Controller
             }
         }
 
-        return response()->json(['message' => 'Project updated successfully', 'project' => $project]);
+        return response()->json([
+            'message' => 'Project updated successfully',
+            'project' => $project->load('translations')->makeHidden('image_path')->append('image_url')
+        ]);
     }
 
 

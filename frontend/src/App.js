@@ -17,6 +17,8 @@ import Resume from './Pages/Resume/Resume';
 import LoginPage from './Pages/Admin/LoginPage';
 import ProtectedRoute from './Axios/ProtectedRoute';
 import AdminPanel from './Pages/Admin/AdminPanel';
+import CreateProjectPage from './Pages/Admin/CreateProjectPage';
+import EditProjectPage from './Pages/Admin/EditProjectPage';
 
 function App() {
     console.log(process.env.REACT_APP_API_GATEWAY_HOST);
@@ -41,6 +43,24 @@ function App() {
                                 element={
                                     <ProtectedRoute>
                                         <AdminPanel />
+                                    </ProtectedRoute>
+                                }
+                            />
+
+                            <Route
+                                path="/admin/panel/createproject"
+                                element={
+                                    <ProtectedRoute>
+                                        <CreateProjectPage />
+                                    </ProtectedRoute>
+                                }
+                            />
+
+                            <Route
+                                path="/admin/panel/editproject/:projectId"
+                                element={
+                                    <ProtectedRoute>
+                                        <EditProjectPage />
                                     </ProtectedRoute>
                                 }
                             />

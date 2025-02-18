@@ -35,10 +35,10 @@ export const AuthProvider = ({ children }) => {
 
             const { token } = response.data;
 
-            localStorage.setItem('authToken', token); // ✅ Store token first
-            setAuthTokenState(token); // ✅ Update React state
+            localStorage.setItem('authToken', token);
+            setAuthTokenState(token);
 
-            await fetchAdminData(); // ✅ Fetch user data after updating state
+            await fetchAdminData();
             setLoading(false);
             return token;
         } catch (error) {

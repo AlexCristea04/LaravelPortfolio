@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import Profile from './profile.png';
 
 const Home = () => {
     return (
@@ -29,7 +30,7 @@ const Home = () => {
                         <div className="col-xxl-7">
                             <div className="d-flex justify-content-center mt-xxl-0">
                                 <div className="profile bg-gradient-primary-to-secondary">
-                                    <img className="profile-img" src="/assets/profile.png" alt="Profile" />
+                                    <img className="profile-img" src={Profile} alt="Profile" />
                                 </div>
                             </div>
                         </div>
