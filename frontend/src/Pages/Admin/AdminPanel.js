@@ -2,10 +2,12 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useAuth } from '../../Axios/AuthentificationContext';
 import {useNavigate} from "react-router-dom";
+import {Button, Card} from "react-bootstrap";
 
 const AdminPanel = () => {
     const navigate = useNavigate();
     const { authToken, logout } = useAuth();
+    const [testimonials, setTestimonials] = useState([]);
     const [projects, setProjects] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -28,7 +30,22 @@ const AdminPanel = () => {
             }
         };
 
+        const fetchTestimonials = async () => {
+            try {
+                setLoading(true);
+                const response = await axios.get(`${API_BASE_URL}/testimonials`, {
+                    headers: { Authorization: `Bearer ${authToken}` },
+                });
+                setTestimonials(response.data);
+                setLoading(false);
+            } catch (err) {
+                setError("Failed to fetch testimonials.");
+                setLoading(false);
+            }
+        };
+
         fetchProjects();
+        fetchTestimonials();
     }, [authToken, API_BASE_URL]);
 
     // Delete a project
@@ -49,6 +66,59 @@ const AdminPanel = () => {
     // Modify a project (Redirect to edit page)
     const handleModify = (projectId) => {
         window.location.href = `/admin/panel/editproject/${projectId}`;
+    };
+
+    //TESTIMONIALS
+    const handleApprove = async (id) => {
+        try {
+            await axios.patch(
+                `${API_BASE_URL}/testimonials/${id}/approve`,
+                {},
+                {
+                    headers: { Authorization: `Bearer ${authToken}` },
+                }
+            );
+            setTestimonials((prev) =>
+                prev.map((t) => (t.id === id ? { ...t, approval: true } : t))
+            );
+        } catch (error) {
+            console.error("Error approving testimonial:", error);
+        }
+    };
+
+    const handleUnapprove = async (id) => {
+        try {
+            await axios.patch(
+                `${API_BASE_URL}/testimonials/${id}/unapprove`,
+                {},
+                {
+                    headers: { Authorization: `Bearer ${authToken}` },
+                }
+            );
+            setTestimonials((prev) =>
+                prev.map((t) => (t.id === id ? { ...t, approval: false } : t))
+            );
+        } catch (error) {
+            console.error("Error unapproving testimonial:", error);
+        }
+    };
+
+    const handleTestimonialDelete = async (id) => {
+        if (!window.confirm('Are you sure you want to delete this testimonial?')) return;
+
+        try {
+            await axios.delete(`${API_BASE_URL}/testimonial/${id}`, {
+                headers: { Authorization: `Bearer ${authToken}` },
+            });
+
+            setTestimonials((prev) =>
+                prev.map((t) => (t.id === id ? { ...t, approval: false } : t))
+            );
+
+        } catch (err) {
+            console.error('Failed to delete testimonial:', err);
+            alert('Error deleting testimonial');
+        }
     };
 
     return (
@@ -82,7 +152,7 @@ const AdminPanel = () => {
                         <div className="col-md-4 mb-4" key={project.id}>
                             <div className="card shadow">
                                 <img
-                                    src={require('./Ok_-6023.png')}
+                                    src={project.image_url || require('./Ok_-6023.png')}
                                     className="card-img-top"
                                     alt={englishTranslation?.title || 'Project Image'}
                                     style={{height: '200px', objectFit: 'cover'}}
@@ -109,8 +179,57 @@ const AdminPanel = () => {
                 })}
             </div>
 
+            {/* Approved Testimonials */}
+            <section className="mb-5">
+                <h2 className="text-center mt-4 mb-4">Approved Testimonials</h2>
+                <div className="row">
+                    {testimonials
+                        .filter((testimonial) => testimonial.approval)
+                        .map((testimonial) => (
+                            <div key={testimonial.id} className="col-md-4">
+                                <Card className="shadow p-3 mb-4">
+                                    <Card.Body>
+                                        <Card.Title>{testimonial.authorname}</Card.Title>
+                                        <Card.Subtitle className="mb-2 text-muted">{testimonial.companyname}</Card.Subtitle>
+                                        <Card.Text>{testimonial.review}</Card.Text>
+                                        <Button variant="danger" onClick={() => handleTestimonialDelete(testimonial.id)} className="me-2">
+                                            Delete
+                                        </Button>
+                                        <Button variant="warning" onClick={() => handleUnapprove(testimonial.id)}>
+                                            Unapprove
+                                        </Button>
+                                    </Card.Body>
+                                </Card>
+                            </div>
+                        ))}
+                </div>
+            </section>
 
-            <h2 className="text-center mb-4 mt-5">Manage Testimonials</h2>
+            {/* Unapproved Testimonials */}
+            <section>
+                <h2 className="text-center mt-4 mb-4">Unapproved Testimonials</h2>
+                <div className="row">
+                    {testimonials
+                        .filter((testimonial) => !testimonial.approval)
+                        .map((testimonial) => (
+                            <div key={testimonial.id} className="col-md-4">
+                                <Card className="shadow p-3 mb-4">
+                                    <Card.Body>
+                                        <Card.Title>{testimonial.authorname}</Card.Title>
+                                        <Card.Subtitle className="mb-2 text-muted">{testimonial.companyname}</Card.Subtitle>
+                                        <Card.Text>{testimonial.review}</Card.Text>
+                                        <Button variant="danger" onClick={() => handleTestimonialDelete(testimonial.id)} className="me-2">
+                                            Delete
+                                        </Button>
+                                        <Button variant="success" onClick={() => handleApprove(testimonial.id)}>
+                                            Approve
+                                        </Button>
+                                    </Card.Body>
+                                </Card>
+                            </div>
+                        ))}
+                </div>
+            </section>
         </div>
     );
 };

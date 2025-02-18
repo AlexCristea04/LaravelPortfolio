@@ -30,7 +30,7 @@ const LoginPage = () => {
                         <p className="text-success text-center">
                             Welcome, <strong>{admin?.name}</strong>!
                         </p>
-                        <button className="btn btn-primary w-100" onClick={() => navigate('/admin/panel')}>
+                        <button className="btn btn-primary w-100 mb-2" onClick={() => navigate('/admin/panel')}>
                             Admin Panel
                         </button>
 

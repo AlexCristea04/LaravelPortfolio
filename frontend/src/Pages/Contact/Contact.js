@@ -1,10 +1,14 @@
 import { useState } from 'react';
+import { AiOutlineMail } from "react-icons/ai";
+import '../../Languages/i18n.js';
+import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
+    const { t } = useTranslation('contact');
+
     const [formData, setFormData] = useState({
         name: '',
         email: '',
-        phone: '',
         message: ''
     });
 
@@ -31,10 +35,10 @@ const Contact = () => {
                     <div className="bg-light rounded-4 py-5 px-4 px-md-5">
                         <div className="text-center mb-5">
                             <div className="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3">
-                                <i className="bi bi-envelope"></i>
+                                <AiOutlineMail/>
                             </div>
-                            <h1 className="fw-bolder">Get in touch</h1>
-                            <p className="lead fw-normal text-muted mb-0">Let's work together!</p>
+                            <h1 className="fw-bolder">{t("Title")}</h1>
+                            <p className="lead fw-normal text-muted mb-0">{t("Subtitle")}</p>
                         </div>
                         <div className="row gx-5 justify-content-center">
                             <div className="col-lg-8 col-xl-6">
@@ -50,7 +54,7 @@ const Contact = () => {
                                             onChange={handleChange}
                                             required
                                         />
-                                        <label htmlFor="name">Full name</label>
+                                        <label htmlFor="name">{t("Name")}</label>
                                     </div>
 
                                     {/* Email input */}
@@ -64,20 +68,20 @@ const Contact = () => {
                                             onChange={handleChange}
                                             required
                                         />
-                                        <label htmlFor="email">Email address</label>
+                                        <label htmlFor="email">{t("Email")}</label>
                                     </div>
 
                                     {/* Message input */}
                                     <div className="form-floating mb-3">
-                    <textarea
-                        className="form-control"
-                        id="message"
-                        placeholder="Enter your message here..."
-                        style={{ height: '10rem' }}
-                        value={formData.message}
-                        onChange={handleChange}
-                        required
-                    />
+                                    <textarea
+                                        className="form-control"
+                                        id="message"
+                                        placeholder="Enter your message here..."
+                                        style={{ height: '10rem' }}
+                                        value={formData.message}
+                                        onChange={handleChange}
+                                        required
+                                    />
                                         <label htmlFor="message">Message</label>
                                     </div>
 

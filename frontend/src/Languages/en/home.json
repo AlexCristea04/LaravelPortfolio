@@ -1,3 +1,21 @@
 {
-  "About Us": "About Us"
+  "badge": "Frontend · Backend · Game Dev",
+  "greeting": "Hi, I'm Alex, nice to meet you.",
+  "headline": "I am a full-stack developer in a variety of frameworks.",
+  "resume": "Resume",
+  "projects": "Projects",
+  "about_me_title": "About Me",
+  "about_me_intro": "My name is Alex Cristea and I help brands grow.",
+  "about_me_desc": "I am a computer science student with a love for programming and designing websites. When I'm not working or studying, I'm spending time on my own personal game projects. I have experience in multiple frameworks, tools, and languages, and am happy to help with whatever project or product you wish to bring to reality. Let's work together!",
+  "testimonials": "Testimonials",
+  "loading": "Loading testimonials...",
+  "no_testimonials": "No testimonials available yet.",
+  "error_testimonials": "Failed to load testimonials. Please try again.",
+  "leave_testimonial_prompt": "Have an experience with me you want to share?",
+  "leave_testimonial_cta": "Leave a testimonial!",
+  "modal_title": "Leave a Testimonial",
+  "name": "Name",
+  "company_name": "Company Name",
+  "review": "Review",
+  "submit": "Submit Testimonial"
 }

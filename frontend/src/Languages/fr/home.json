@@ -1,3 +1,21 @@
 {
-  "About Us": "About Us"
+  "badge": "Frontend · Backend · Développement de jeux",
+  "greeting": "Salut, je suis Alex.",
+  "headline": "Je suis un développeur full-stack.",
+  "resume": "CV",
+  "projects": "Projets",
+  "about_me_title": "À propos de moi",
+  "about_me_intro": "Je m'appelle Alex Cristea et j'aide les marques à se développer.",
+  "about_me_desc": "Je suis un étudiant en informatique passionné par la programmation et la conception de sites web. Quand je ne travaille pas ou n'étudie pas, je passe du temps sur mes propres projets de jeux. J'ai de l'expérience dans plusieurs frameworks, outils et langages, et je suis heureux d'aider avec tout projet ou produit que vous souhaitez concrétiser. Travaillons ensemble !",
+  "testimonials": "Témoignages",
+  "loading": "Chargement des témoignages...",
+  "no_testimonials": "Aucun témoignage disponible pour le moment.",
+  "error_testimonials": "Échec du chargement des témoignages. Veuillez réessayer.",
+  "leave_testimonial_prompt": "Avez-vous une expérience avec moi à partager ?",
+  "leave_testimonial_cta": "Laissez un témoignage !",
+  "modal_title": "Laisser un témoignage",
+  "name": "Nom",
+  "company_name": "Nom de l'entreprise",
+  "review": "Avis",
+  "submit": "Envoyer le témoignage"
 }
